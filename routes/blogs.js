@@ -136,7 +136,7 @@ router.post('/:id', function (req, res) { //re-view the blog with updates
   });
 });
 
-router.get('/:id/deletes', function (req, res) {  // remove blog
+router.get('/:id/delete', function (req, res) {  // remove blog
     var params = {
       _id : req.params.id
     };
