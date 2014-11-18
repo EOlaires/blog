@@ -1,0 +1,29 @@
+doctype html
+
+html
+  head
+    title = 'Update Blog'
+    link(rel='stylesheet', href='/css/style.css')
+    h3 #{updateblogerror}
+
+  body(link='#800080', vlink='#800080', alink='#800080')
+    div.updateblog
+      each val, key in list
+        form(action='/blog/#{val._id}', method='post')
+          div
+            div
+              - each val, key in list
+                input(id='font' type='text', value= val.title, name='titleblog', size='135')
+            div
+              br
+              - each val, key in list
+                textarea(name='post', rows='40', cols='192') #{val.post}
+            div
+              br
+              - each val, key in list
+                input(type='hidden', name='update', value= val._id)
+            div(align='center')
+              input(type='submit', value='post')
+            div(align='left')
+              each val, key in list
+                a(href='/blog/#{val._id}') Cancel

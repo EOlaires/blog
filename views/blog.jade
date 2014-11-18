@@ -1,0 +1,33 @@
+doctype html
+
+html
+  head
+    link(rel='stylesheet', href='../css/style.css')
+    title = Blog Page
+    h3 #{errordelete}
+    div.head
+      h3 Welcome to your account #{fname} #{lname}
+      a(href='/logout') Logout
+  body(link='#800080', vlink='#800080', alink='#800080')
+    br
+    br
+    div.table
+      table(align='center')
+        tr
+          td(align='center')
+            a(href='/blog/new') New Blog
+      table
+        -if (list.length != 0) 
+          -each i in list
+            tr   
+              td(width="80%", align="left")
+                a(href='/blog/#{i._id}') #{i.title}
+                // a(href='/blog/viewblog?idcontent=#{i._id}') #{i.title}
+              td(width="20%", align="center")
+                a(href='/blog/#{i._id}/edit') revise this blog
+                // a(href='/blog/updateblog?idcontent1=#{i._id}') revise this blog 
+              td(align="right")
+                a(href='/blog/#{i._id}/delete') remove
+                // a(href='/blog/removeblog?idcontent=#{i._id}') remove
+          
+

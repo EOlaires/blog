@@ -1,0 +1,45 @@
+doctype html
+
+html
+  head
+    title(id="title") = "Signup Page"
+    link(rel='stylesheet', href='../css/style.css')
+    div.head
+      h1(id="title") Create your MyBlog Account!
+  body(link='#0000FF', vlink='#0000FF', alink='#0000FF')
+    br
+    br
+    div.body
+      div #{signuperror}
+      form(action='/login', method='post')
+        div
+          div
+            span Name
+            br
+            input(type='text', placeholder='First', name='fname', size='15')
+            nbsp
+            input(type='text', placeholder='Last', name='lname', size='15')
+          div
+            br
+            span Choose your Username
+            br
+            input(type='text', name='user', size='36')
+          div
+            br
+            span Create a Password
+            br
+            input(type='password', name="pass", size='36')
+          div
+            br
+            span Confirm your Password
+            br
+            input(type='password', name='pass1', size='36')
+            nbsp #{message}
+          div
+            input(type='hidden', name='newuser', value='true')
+        div
+          br
+          input(type='submit', value='Sign Up')
+    div.link
+      br
+      a(href='/login') back to login

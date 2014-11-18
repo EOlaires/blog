@@ -1,0 +1,24 @@
+doctype html
+
+html
+  head
+    title = Create Blog
+    link(rel='stylesheet', href='../css/style.css')
+    h3 #{updateblogerror}
+  body(link='#800080', vlink='#800080', alink='#800080')
+    div.updateblog
+      form(action='/blog', method='post')
+        div
+          div
+            input(id='font')(type='text', placeholder='My Blog Title', name='titleblog', size='135')
+          div
+            br
+            textarea(name='post', placeholder='content place here....', rows='40', cols='192')
+          div(align='center')
+            br
+            input(type='submit', value='post')
+      div(align='left')
+        br
+        a(href='/blog') Cancel
+        
+

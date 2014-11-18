@@ -1,0 +1,28 @@
+doctype html
+
+html
+  head
+    div #{invalid}
+    title = "LogIn Page"
+    link(rel='stylesheet', href='../css/style.css')
+    div.head
+      h1(id="title") MyBlog.com
+  body(link='#0000FF', vlink='#0000FF', alink='#0000FF')
+    br
+    br
+    div.body
+      div
+        form(action='/login', method='post')
+          div
+            div
+              input(type='text', placeholder='Username', name='user')
+            div
+              br
+              input(type='password', placeholder='Password', name='pass')
+            div
+              br
+              input(type='submit', value='Log In')
+    div.link
+      br
+      a(href='/signup') Create an account?
+      

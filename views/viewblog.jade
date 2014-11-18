@@ -1,0 +1,26 @@
+doctype html
+
+html
+  head
+    title = 'View Blog'
+    link(rel='stylesheet', href='/css/style.css')
+    div.head
+      - each val, key in list
+        h3 #{val.title}
+      div(align='center')
+        - each val, key in list
+          p #{val.date} #{val.time}
+  body(link='#800080', vlink='#800080', alink='#800080')
+    br
+    br
+    div.viewblog
+      div.link
+        - each val, key in list
+          a(href='/blog/#{val._id}/edit') revise this blog
+      div 
+        - each val, key in list
+          p #{val.post}
+      div.link
+        a(href='/blog') back
+
+      
