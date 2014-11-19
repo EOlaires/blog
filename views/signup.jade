@@ -5,7 +5,7 @@ html
     title(id="title") = "Signup Page"
     link(rel='stylesheet', href='../css/style.css')
     div.head
-      h1(id="title") Create your MyBlog Account!
+      h1(id="title", style='color:#DBE8F9') Create your MyBlog Account!
   body(link='#0000FF', vlink='#0000FF', alink='#0000FF')
     br
     br
@@ -14,32 +14,37 @@ html
       form(action='/login', method='post')
         div
           div
-            span Name
+            span.thick Name
             br
-            input(type='text', placeholder='First', name='fname', size='15')
-            nbsp
-            input(type='text', placeholder='Last', name='lname', size='15')
+            input(id='font14', type='text', placeholder='First', name='fname', size='15', value= fname)
+            nbsp #{fnval}
+            input(id='font14', type='text', placeholder='Last', name='lname', size='15', value= lname)
+            nbsp #{lnval}
           div
             br
-            span Choose your Username
+            span.thick Choose your Username             
             br
-            input(type='text', name='user', size='36')
+            input(id='font14', type='text', name='user', size='36', value= user) 
+            nbsp #{uval}
           div
             br
-            span Create a Password
+            span.thick Create a Password
             br
-            input(type='password', name="pass", size='36')
+            input(id='font14', type='password', name="pass", size='36', value= pass)
+            nbsp #{pval}
           div
             br
-            span Confirm your Password
+            span.thick Confirm your Password
             br
-            input(type='password', name='pass1', size='36')
+            input(id='font14', type='password', name='pass1', size='36', value= pass1)
+            nbsp #{p1val} 
+            br
             nbsp #{message}
           div
             input(type='hidden', name='newuser', value='true')
         div
           br
-          input(type='submit', value='Sign Up')
+          input.btn(type='submit', value='Sign Up')
     div.link
       br
       a(href='/login') back to login

@@ -15,7 +15,23 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
   if (req.body.newuser) {
-    if (req.body.fname.length !=0 && req.body.lname !=0 && req.body.user !=0 && req.body.user.pass !=0 && req.body.user.pass1 !=0) {
+    if (!req.body.fname) {
+      var fnval = "*";
+    }
+    if (!req.body.lname) {
+      var lnval = "*";
+    }
+    if (!req.body.user) {
+      var uval = "*";
+    }
+    if (!req.body.pass) {
+      var pval = "*";
+    }
+    if (!req.body.pass1) {
+      var p1val = "*"
+    }
+
+    if (req.body.fname !=0 && req.body.lname !=0 && req.body.user !=0 && req.body.user.pass !=0 && req.body.user.pass1 !=0) {
       if ((req.body.pass) === (req.body.pass1)) {
         var params = {
           first_name : req.body.fname,
@@ -51,7 +67,7 @@ router.post('/', function (req, res) {
       }     
     }
     else {
-      res.render('signup.jade', {signuperror : "Please sign all the required fields!"});
+      res.render('signup.jade', {fnval:fnval, lnval:lnval, uval:uval, pval:pval, p1val: p1val, fname : req.body.fname, lname :req.body.lname, user : req.body.user, pass : req.body.pass, pass1 : req.body.pass1});
     }
   }
 

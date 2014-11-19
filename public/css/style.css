@@ -1,36 +1,75 @@
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 15px;
+  background: #466289 ;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+.log {
+  font-weight: bold;
+}
+.btn:hover {
+  background: #627894;
+  text-decoration: none;
+}
+.space {
+  white-space:pre-wrap;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  background-color: #ACD1E9;
+}
+a:active {
+  background-color: #ACD1E9;
+}
+
+.thick {
+    font-weight: bold;
+}
+
 .head {
-  background: url(../images/silver.jpg);
+  background: #466289 ;
   opacity: 0.9px;
   filter: alpha(opacity=60);
   margin: auto;
-  font-family: fantasy;
   text-align: center;
-  padding: 20px;
-  border: 1px solid black;
-  width: 1000px;
+  padding: 2px;
+  border-bottom: 1px solid #A0AEC1;
+  /*width: 1000px;*/
 }
 body{
-  background: url(../images/flower.jpg);
+  /* background: url(../images/flower.jpg); */
+  background: #DBE8F9 ;
 }
 #title {
   font-family: serif;
 }
 
 .body {
-	background: grey; 
+	background: #A0AEC1; 
   opacity: 0.6 ;
-	font-family: fantasy;
+	/*font-family: fantasy;*/
 	text-align: center;
 	width: 350px;
 	margin: auto;
 	padding: 25px;
-  border: 1px solid black;
+  border: 1px;
   filter: alpha(opacity=60);
   border-radius: 25px;
 }
 
 .blogbody {
-  background: grey; 
+  background: #A0AEC1; 
   opacity: 0.6 ;
   font-family: fantasy;
   
@@ -49,7 +88,7 @@ body{
 }
 
 .table {
-  background: grey;
+  background: #A0AEC1;
   opacity: 0.9;
   font-family: sans-serif;
   width: 1000px;
@@ -61,9 +100,9 @@ body{
 }
 
 .viewblog {
-  background: grey; 
+  background: #A0AEC1; 
   opacity: 0.8 ;
-  font-family: fantasy;
+  /*font-family: fantasy;*/
   text-align: left;
   width: 1000px;
   margin: auto;
@@ -74,7 +113,7 @@ body{
 }
 
 .updateblog {
-  background: grey; 
+  background: #A0AEC1; 
   font-family: fantasy;
   text-align: left;
   width: 1000px;
@@ -86,4 +125,7 @@ body{
 }
 #font {
   font-size:16px;
+}
+#font14{
+  font-size: 14px;
 }

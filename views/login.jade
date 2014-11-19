@@ -6,8 +6,9 @@ html
     title = "LogIn Page"
     link(rel='stylesheet', href='../css/style.css')
     div.head
-      h1(id="title") MyBlog.com
-  body(link='#0000FF', vlink='#0000FF', alink='#0000FF')
+      h1(id="title", style='color:#DBE8F9') My Blog
+  body(link='#0000FF', vlink='#0000FF', alink='#000000')
+    br
     br
     br
     div.body
@@ -15,13 +16,13 @@ html
         form(action='/login', method='post')
           div
             div
-              input(type='text', placeholder='Username', name='user')
+              input(id='font14', type='text', placeholder='Username', name='user', size='25')
             div
               br
-              input(type='password', placeholder='Password', name='pass')
+              input(id='font14', type='password', placeholder='Password', name='pass', size='25')
             div
               br
-              input(type='submit', value='Log In')
+              input.btn(type='submit', value='Log In')
     div.link
       br
       a(href='/signup') Create an account?

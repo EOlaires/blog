@@ -6,7 +6,7 @@ html
     link(rel='stylesheet', href='/css/style.css')
     h3 #{updateblogerror}
 
-  body(link='#800080', vlink='#800080', alink='#800080')
+  body(link='#00477F', vlink='#00477F', alink='#00477F')
     div.updateblog
       each val, key in list
         form(action='/blog/#{val._id}', method='post')
@@ -23,7 +23,7 @@ html
               - each val, key in list
                 input(type='hidden', name='update', value= val._id)
             div(align='center')
-              input(type='submit', value='post')
+              input.btn(type='submit', value='post')
             div(align='left')
               each val, key in list
                 a(href='/blog/#{val._id}') Cancel
