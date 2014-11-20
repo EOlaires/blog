@@ -24,6 +24,6 @@ html
                 input(type='hidden', name='update', value= val._id)
             div(align='center')
               input.btn(type='submit', value='post')
-            div(align='left')
+            div(align='right')
               each val, key in list
-                a(href='/blog/#{val._id}') Cancel
+                a.button-link(href='/blog/#{val._id}') Cancel

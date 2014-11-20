@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongodb = require('../model/mongo');
 
-router.get('/', function (req, res) {
+router.get('/', checksession, function (req, res) {
   if (req.session.user) { // ichechek nya yung session
     var params = {userid : req.session.user._id}; // i checheck lhat ng files na belong kay user._id
     mongodb.blogs.find(params, function (err, blog) {

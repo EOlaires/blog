@@ -7,15 +7,18 @@ html
     h3 #{errordelete}
     div.head
       h2(id="title", style='color:#DBE8F9') Welcome to your account #{fname} #{lname}
-      a.log(href='/logout') Logout
+      a.button-link(href='/logout') Logout
   body(link='#00477F', vlink='#00477F', alink='#00477F')
+    br
+    br
     br
     br
     div.table
       table(align='center')
         tr
           td(align='center')
-            a(href='/blog/new') New Blog
+            a.button-link(href='/blog/new') New Blog
+
       table(cellpadding='10')
         -if (list.length != 0) 
           -each i in list

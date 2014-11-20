@@ -63,11 +63,11 @@ router.post('/', function (req, res) {
           });
       }
       else {
-        res.render('signup.jade', {message : "Mismatch Password!"});
+        res.render('signup.jade', {message : "Mismatch Password!", fname : req.body.fname, lname :req.body.lname, user : req.body.user, notif : "!"});
       }     
     }
     else {
-      res.render('signup.jade', {fnval:fnval, lnval:lnval, uval:uval, pval:pval, p1val: p1val, fname : req.body.fname, lname :req.body.lname, user : req.body.user, pass : req.body.pass, pass1 : req.body.pass1});
+      res.render('signup.jade', {fnval:fnval, lnval:lnval, uval:uval, pval:pval, p1val: p1val, fname : req.body.fname, lname :req.body.lname, user : req.body.user});
     }
   }
 
@@ -88,40 +88,5 @@ router.post('/', function (req, res) {
     });
   }
 });
-
-// router.get('/signup', function (req, res) {
-//   res.render('signup.jade');
-// });
-
-// router.post('/signup', function (req, res) {
-
-//   if (req.body.fname.length !=0 && req.body.lname !=0 && req.body.user !=0 && req.body.user.pass !=0 && req.body.user.pass1 !=0) {
-//     //console.log(req.body);
-//       if ((req.body.pass) === (req.body.pass1)) {
-//         var params = {
-//           first_name : req.body.fname,
-//           last_name : req.body.lname,
-//           username : req.body.user,
-//           password : req.body.pass
-//         }
-//       }
-//       else {
-//         res.render('signup.jade', {message : "Mismatch Password!"});
-//       }
-
-//       mongodb.users.insert(params, function (err, user) {
-//         if (err) {
-//           res.render('signup.jade', {signuperror : "SignUp not Successful!"});
-//         }
-//         else {
-//           res.redirect('/login');
-//         }
-//       })
-//   }
-//   else {
-//     res.render('signup.jade', {signuperror : "Please sign all the required fields!"});
-//   }
-
-// });
 
 module.exports = router; // ?? what is module.exports clarification

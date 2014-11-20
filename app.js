@@ -1,10 +1,10 @@
-var express = require('express'); //express
-var app = express();
+var express = require('express'); 
+var app = express(); // instantiate of new express
 var path = require('path');
 
 app.engine('jade', require('jade').__express); //jade //automatic n nagrurun ung jade kinocompile sya s node express pra marun
 
-app.use(express.static(path.join(__dirname, 'public'))); // for css to be read on express
+app.use(express.static(path.join(__dirname, 'public'))); // include css and js files in node
 
 var mongodb = require('./model/mongo'); //mongo
 var session = require('express-session');  //session
@@ -12,7 +12,7 @@ var cookieParser = require('cookie-parser');  //cookieparser
 app.use(cookieParser());
 app.use(session({secret:'anbu', saveUninitialized:true, resave:true}));
 
-var bodyParser = require('body-Parser'); //bodyParser
+var bodyParser = require('body-Parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 

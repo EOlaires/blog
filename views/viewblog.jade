@@ -16,11 +16,13 @@ html
     div.viewblog
       div.link
         - each val, key in list
-          a(href='/blog/#{val._id}/edit') revise this blog
+          a.button-link(href='/blog/#{val._id}/edit') Revise
+          br
+          br
       div 
         - each val, key in list
           p.space #{val.post}
       div.link
-        a(href='/blog') back
+        a.button-link(href='/blog') Back
 
       

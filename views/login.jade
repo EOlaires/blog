@@ -2,7 +2,7 @@ doctype html
 
 html
   head
-    div #{invalid}
+    // div #{invalid}
     title = "LogIn Page"
     link(rel='stylesheet', href='../css/style.css')
     div.head
@@ -14,13 +14,14 @@ html
     div.body
       div
         form(action='/login', method='post')
-          div
+          div #{invalid}
             div
+              br
               input(id='font14', type='text', placeholder='Username', name='user', size='25')
             div
               br
               input(id='font14', type='password', placeholder='Password', name='pass', size='25')
-            div
+            div 
               br
               input.btn(type='submit', value='Log In')
     div.link
